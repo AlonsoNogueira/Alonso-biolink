@@ -6,65 +6,208 @@
     <title>Biolink - Alonso</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="background-overlay"></div>
+    <!-- Cursor glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
+    <!-- Scanline overlay -->
+    <div class="scanline"></div>
+
     <main class="content">
-        <header class="profile">
+        <!-- Header / Perfil -->
+        <header class="profile" id="home">
             <div class="profile-img-container">
-                <img src="assets/WhatsApp Image 2026-03-06 at 20.15.02.jpeg" alt="David Alonso" id="avatar">
+                <img src="assets/myPicture.jpeg" alt="David Alonso" id="avatar">
+                <div class="pulse-ring"></div>
             </div>
-            <h1>David Alonso Nogueira Silva</h1>
-            <p>Estudante de Desenvolvimento de Sistemas com interesse em desenvolvimento web e mobile. <br>
-                atualmente cursando o 2º semestre na Eeep Salamão Alves de Moura. <br>
-                Apaixonado por tecnologia e inovação.<br>
-                Foco em desenvolvimento <span>Back-end</span>.
-            </p>
+            <div class="profile-info">
+                <h1>David Alonso Nogueira Silva</h1>
+                <p class="role">Back-end Developer</p>
+                <div class="profile-tags">
+                    <img src="assets/Node.png" alt="Node.js" class="tech-logo">
+                    <img src="assets/java.png" alt="Java" class="tech-logo">
+                    <img src="assets/docker.png" alt="Docker" class="tech-logo">
+                    <img src="assets/SQL.png" alt="PostgreSQL" class="tech-logo">
+                    <img src="assets/Tscript.png" alt="Typescript" class="tech-logo">
+                    <img src="assets/PRISMA.png" alt="Prisma ORM" class="tech-logo">
+                    <img src="assets/Spring.png" alt="Spring Boot" class="tech-logo">
+                    <img src="assets/GIT.png" alt="Git" class="tech-logo">
+                </div>
+            </div>
         </header>
 
-        <section class="section">
-            <h2>Alguns trabalhos que realizei</h2>
-            <div class="cards-grid">
-                <a href="https://redasam.vercel.app" class="card project-card" target="_blank">
-                    <span class="card-title">Reda SAM</span>
-                    <span class="card-arrow">→</span>
-                </a>
-                <a href="https://apsam.vercel.app" class="card project-card" target="_blank">
-                    <span class="card-title">Achados e perdidos - SAM</span>
-                    <span class="card-arrow">→</span>
-                </a>
-
-                <a href="https://orbix-ai-front-4sa3.vercel.app/" class="card project-card" target="_blank">
-                    <span class="card-title">OrbyxAI</span>
-                    <span class="card-arrow">→</span>
-                </a>
+        <!-- Sobre mim -->
+        <section class="section reveal" id="sobre">
+            <div class="section-header cyan">
+                <span class="section-title">About<br>Me</span>
+                <img src="assets/AboutMe.png" alt="" class="section-icon">
+            </div>
+            <div class="section-body">
+                <p>Desenvolvedor de software com foco em back-end, dedicado à construção de sistemas robustos, escaláveis e orientados a boas práticas de engenharia. Ao longo da minha trajetória, venho ampliando meu domínio técnico também na área de DevOps, buscando constantemente atualização sobre automação de processos, integração e entrega contínua (CI/CD), containerização e gerenciamento de infraestrutura.</p>
+                <p>Sou Técnico em Desenvolvimento de Sistemas, formação obtida por meio de um curso técnico integrado ao Ensino Médio, realizado na Escola Estadual de Educação Profissional Salomão Alves de Moura (EEEP Salomão Alves de Moura), localizada no estado do Ceará. Essa formação me proporcionou uma base sólida em lógica de programação, desenvolvimento de software e fundamentos de engenharia da computação.</p>
+                <p>Minha experiência inclui a atuação em projetos desenvolvidos em parceria com a própria instituição de ensino, onde pude aplicar conhecimentos técnicos em contextos educacionais, contribuindo para soluções que unem tecnologia e aprendizado.</p>
+                <p>Além disso, tenho experiência no desenvolvimento de soluções no modelo SaaS B2B, atuando junto a um time parceiro no planejamento e implementação de sistemas voltados ao setor automobilístico, especificamente para empresas de locação de motos e carros. Nesses projetos, participei da concepção de arquiteturas back-end, integração de serviços e estruturação de funcionalidades voltadas à gestão de frotas, contratos e operações do negócio.</p>
             </div>
         </section>
 
-        <section class="section">
-            <h2>Redes sociais</h2>
+        <!-- Trabalhos notaveis -->
+        <section class="section reveal" id="projetos">
+            <div class="section-header yellow">
+                <span class="section-title">Notable<br>Works</span>
+                <img src="assets/notableWorks.png" alt="" class="section-icon">
+            </div>
+
+            <div class="projects-grid">
+                <!-- RedaSAM -->
+                <div class="project-card" style="--project-color: #10b981">
+                    <div class="project-img">
+                        <img src="assets/redasam.png" alt="RedaSAM">
+                        <span class="project-number">#01</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-name" style="color: #10b981">RedaSAM</h3>
+                        <div class="project-desc-box">
+                            <p>Plataforma de correcao de redacoes estilo ENEM com envio por foto ou texto e feedback de professores</p>
+                        </div>
+                        <p class="project-desc">Atuei no desenvolvimento back-end e devops da plataforma. O sistema permite que estudantes enviem redacoes manuscritas por foto ou digite diretamente, recebendo correcao detalhada por professores qualificados com analise por paragrafo, nota por competencia e acompanhamento de evolucao ao longo do tempo.</p>
+                        <div class="project-tags">
+                            <span class="tag">Node.js</span>
+                            <span class="tag">DevOps</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://redasam.vercel.app" class="btn btn-project" target="_blank">Acesse Ja!</a>
+                        </div>
+                        <p class="project-partner">Parceria com a EEEP Salomao Alves de Moura</p>
+                    </div>
+                </div>
+
+                <!-- Achados e Perdidos -->
+                <div class="project-card" style="--project-color: #f97316">
+                    <div class="project-img">
+                        <img src="assets/lostAndFound.png" alt="Achados e Perdidos">
+                        <span class="project-number">#02</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-name" style="color: #f97316">Achados e Perdidos</h3>
+                        <div class="project-desc-box">
+                            <p>Sistema de gerenciamento de achados e perdidos escolar com filtros por categoria</p>
+                        </div>
+                        <p class="project-desc">Sistema desenvolvido para a escola EEEP Salomao Alves de Moura que permite aos estudantes registrar itens perdidos, consultar itens encontrados e filtrar por categorias como eletronicos, roupas, acessorios, livros e esportes. Conecta quem perdeu ao quem encontrou de forma rapida e organizada.</p>
+                        <div class="project-tags">
+                            <span class="tag">Web</span>
+                            <span class="tag">CRUD</span>
+                            <span class="tag">UI</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://apsam.vercel.app" class="btn btn-project" target="_blank">Acesse Ja!</a>
+                        </div>
+                        <p class="project-partner">Equipe: Joao Vinny, Alonso, Yago, Paulo Victor e Jose Miguel</p>
+                    </div>
+                </div>
+
+                <!-- OrbyxAI -->
+                <div class="project-card" style="--project-color: #8b5cf6">
+                    <div class="project-img">
+                        <img src="assets/Orbyx.png" alt="OrbyxAI">
+                        <span class="project-number">#03</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-name" style="color: #8b5cf6">OrbyxAI</h3>
+                        <div class="project-desc-box">
+                            <p>Plataforma de integracao com inteligencia artificial para automacao e produtividade</p>
+                        </div>
+                        <p class="project-desc">Projeto de desenvolvimento de uma plataforma web com integracao de inteligencia artificial focada em automatizar tarefas e aumentar a produtividade. Envolve consumo de APIs de IA, processamento de dados e interface interativa para o usuario.</p>
+                        <div class="project-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">API</span>
+                            <span class="tag">Front-end</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://orbix-ai-front-4sa3.vercel.app/" class="btn btn-project" target="_blank">Acesse Ja!</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- StoquiFrota -->
+                <div class="project-card" style="--project-color: #2563eb">
+                    <div class="project-img">
+                        <img src="assets/project-stoquifrota.png" alt="StoquiFrota">
+                        <span class="project-number">#04</span>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-name" style="color: #2563eb">StoquiFrota</h3>
+                        <div class="project-desc-box">
+                            <p>SaaS B2B para gestao de frotas de locacao de carros e motos</p>
+                        </div>
+                        <p class="project-desc">Sistema completo de gestao de estoque e frota para empresas de locacao de veiculos. O plataforma oferece controle em tempo real de veiculos disponiveis, alugados, em manutencao e bloqueados, facilitando a administracao de contratos e operacoes do negocio.</p>
+                        <div class="project-tags">
+                            <span class="tag">SaaS</span>
+                            <span class="tag">B2B</span>
+                            <span class="tag">Back-end</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://stoquifrota.site" class="btn btn-project" target="_blank">Acesse Ja!</a>
+                        </div>
+                        <p class="project-partner">Parceria com a Kobe Solutions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Redes sociais -->
+        <section class="section reveal" id="social">
+            <div class="section-header cyan">
+                <span class="section-title">Social<br>Links</span>
+                <img src="assets/socialLinks.png" alt="" class="section-icon">
+            </div>
             <div class="social-grid">
-                <a href="https://github.com/alonsonogueira" class="card social-card" target="_blank">
-                    <img src="assets/github-icon.jpg" alt="github" class="social-icon">
-                    <span>GitHub</span>
+                <a href="https://www.instagram.com/alonsnogueira_/" class="social-card" target="_blank">
+                    <img src="assets/instagram.jpg" alt="Instagram" class="social-icon">
+                    <span class="social-name">@alonsnogueira_</span>
                 </a>
-
-                <a href="https://www.linkedin.com/in/alonsonogueira/" class="card social-card" target="_blank">
-                    <img src="assets/linkdln.webp" alt="linkedin" class="social-icon">
-                    <span>LinkedIn</span>
+                <a href="https://github.com/alonszzh" class="social-card" target="_blank">
+                    <img src="assets/github-icon.jpg" alt="GitHub" class="social-icon">
+                    <span class="social-name">github.com/alonszzh</span>
                 </a>
-
-                <a href="https://www.instagram.com/alonsnogueira_/" class="card social-card" target="_blank">
-                    <img src="assets/instagram.jpg" alt="instagram" class="social-icon">
-                    <span>Instagram</span>
+                <a href="https://www.linkedin.com/in/alonsonogueira/" class="social-card" target="_blank">
+                    <img src="assets/linkdln.webp" alt="LinkedIn" class="social-icon">
+                    <span class="social-name">linkedin.com/in/alonsonogueira</span>
                 </a>
             </div>
+            <a href="mailto:alonsonogueira036@gmail.com" class="email-card">
+                <img src="assets/email.png" alt="" class="email-icon">
+                <span class="email-label">Email para contato:</span>
+                <span class="email-value">alonsonogueira036@gmail.com</span>
+            </a>
         </section>
+
         <footer>
-            <p>Página desenvolvida por David Alonso Nogueira Silva</p>
+            <p>Desenvolvido por David Alonso Nogueira Silva</p>
         </footer>
     </main>
+
+    <script>
+        // Cursor glow effect
+        const glow = document.getElementById('cursorGlow');
+        document.addEventListener('mousemove', (e) => {
+            glow.style.setProperty('--x', e.clientX + 'px');
+            glow.style.setProperty('--y', e.clientY + 'px');
+        });
+
+        // Scroll reveal animation
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
